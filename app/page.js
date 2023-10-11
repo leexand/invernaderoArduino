@@ -7,6 +7,7 @@ export const metadata = {
 }
 
 export default function Login() {
+  console.log(process.env.DB_NAME);
   return (
     <CardPages size="md" title="Iniciar Sesión">
       <FormLogin />
