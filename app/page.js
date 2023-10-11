@@ -7,10 +7,10 @@ export const metadata = {
 }
 
 export default function Login() {
-  console.log(process.env.DB_NAME);
   return (
     <CardPages size="md" title="Iniciar Sesión">
       <FormLogin />
+    {process.env.DB_NAME}
       <p className="pt-3 text-white">No tienes una cuenta? <Link href="/registro" className="text-green-600" >Registrate</Link></p>
     </CardPages>
   )
