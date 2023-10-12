@@ -11,7 +11,6 @@ export default function GraficaLine({ data }) {
 
   const router = useRouter()
   
-
   return (
     <Line
       id="myChart"
