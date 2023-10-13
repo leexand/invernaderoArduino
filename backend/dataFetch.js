@@ -4,7 +4,7 @@ import { timeNormalize } from "@/utils/normalizeData";
 export const revalidate = 2
 
 export async function dataChart() {
-
+    console.log('a');
     const a = await query({
     query: `
       INSERT INTO mediciones(temperatura, humedad_rel, humedad_sue, voltaje, carga_bat) VALUES (?,?,?,?,?)`,
