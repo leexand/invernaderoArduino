@@ -1,6 +1,6 @@
 import { query, queryAndTotal } from "@/utils/db";
 import { getTokenValue } from "@/utils/token";
-
+console.log('=');
 export async function getUsers(start, limit, search) {
   const claims = getTokenValue();
   return await queryAndTotal({
