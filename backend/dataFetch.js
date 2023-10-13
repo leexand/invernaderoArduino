@@ -32,31 +32,31 @@ export async function dataChart() {
     datasets: [
       {
         label: 'Temperatura',
-        data: Math.floor(Math.random() * 99) + 1,
+        data: (Math.floor(Math.random() * 99) + 1),
         tension: 0.2,
         borderColor: "#dc2626"
       },
       {
         label: 'Humedad relativa',
-        data: Math.floor(Math.random() * 99) + 1,
+        data: (Math.floor(Math.random() * 99) + 1),
         tension: 0.2,
         borderColor: "#0891b2"
       },
       {
         label: 'Humedad suelo',
-        data: Math.floor(Math.random() * 1022) + 1,
+        data: (Math.floor(Math.random() * 1022) + 1),
         tension: 0.2,
         borderColor: "#0284c7"
       },
       {
         label: 'Voltaje',
-        data: Math.floor(Math.random() * 17) + 1,
+        data: (Math.floor(Math.random() * 17) + 1),
         tension: 0.2,
         borderColor: "#facc15"
       },
       {
         label: 'Carga bateria',
-        data: Math.floor(Math.random() * 6) + 1,
+        data: (Math.floor(Math.random() * 6) + 1),
         tension: 0.2,
         borderColor: "#059669"
       }
