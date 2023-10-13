@@ -4,6 +4,19 @@ import { timeNormalize } from "@/utils/normalizeData";
 export const revalidate = 2
 
 export async function dataChart() {
+
+    const a = await query({
+    query: `
+      INSERT INTO mediciones(temperatura, humedad_rel, humedad_sue, voltaje, carga_bat) VALUES (?,?,?,?,?)`,
+      values: [
+        (Math.floor(Math.random() * 99) + 1),
+        (Math.floor(Math.random() * 99) + 1),
+        (Math.floor(Math.random() * 1022) + 1),
+        (Math.floor(Math.random() * 17) + 1),
+        (Math.floor(Math.random() * 6) + 1)
+      ]
+  });
+  
   const data = await query({
     query: `
       SELECT *
@@ -15,18 +28,6 @@ export async function dataChart() {
       )Var1
       ORDER BY fecha ASC
     `
-  });
-
-  const a = await query({
-    query: `
-      INSERT INTO mediciones(temperatura, humedad_rel, humedad_sue, voltaje, carga_bat) VALUES (?,?,?,?,?)`,
-      values: [
-        Math.floor(Math.random() * 99) + 1,
-        Math.floor(Math.random() * 99) + 1,
-        Math.floor(Math.random() * 1022) + 1,
-        Math.floor(Math.random() * 17) + 1,
-        Math.floor(Math.random() * 6) + 1
-      ]
   });
 
   let rawData = {};
