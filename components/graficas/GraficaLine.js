@@ -10,6 +10,9 @@ CharJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, To
 export default function GraficaLine({ data }) {
 
   const router = useRouter()
+  useEffect(() => {
+    setInterval(() => router.refresh(), 2000)
+  },[])
   
   return (
     <Line
