@@ -28,7 +28,7 @@ export async function dataChart() {
   // }
 
   const chartData = {
-    labels: timeNormalize(new Date())/*rawData.fecha*/,
+    labels: 1/*rawData.fecha*/,
     datasets: [
       {
         label: 'Temperatura',
